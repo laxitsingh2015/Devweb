@@ -1,0 +1,11 @@
+version: 0.0
+os: linux
+files:
+  - source: /Web-Application.zip
+    destination: /var/www/html   # Change this path to where you want to deploy the files on your EC2 instance
+
+hooks:
+  BeforeInstall:
+    - location: scripts/unzip.sh
+      timeout: 300
+      runas: root
