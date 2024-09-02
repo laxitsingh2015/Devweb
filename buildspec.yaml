@@ -16,5 +16,6 @@ phases:
 
 artifacts:
   files:
+    - script/*.sh
     - appspec.yml
     - Web-Application.zip
