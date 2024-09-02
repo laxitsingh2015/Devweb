@@ -6,9 +6,9 @@ files:
 
 hooks:
   BeforeInstall:
-    - location: var/www/html/scripts/install_dependencies.sh
+    - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
-    - location: var/www/html/scripts/unzip.sh
+    - location: scripts/unzip.sh
       timeout: 300
       runas: root
