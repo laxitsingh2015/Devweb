@@ -6,12 +6,6 @@ files:
 
 hooks:
   BeforeInstall:
-    - location: scripts/chmod_install_dependencies.sh
-      timeout: 300
-      runas: root
-    - location: scripts/install_dependencies.sh
-      timeout: 300
-      runas: root
     - location: scripts/unzip.sh
       timeout: 300
       runas: root
