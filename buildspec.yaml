@@ -3,19 +3,16 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Installing dependencies..."
-  pre_build:
-    commands:
-      - echo "Preparing to build..."
+      - echo Installing NGINX - echo apt-get install NGINX
+      - sudo apt-get update
+      - sudo apt-get install nginx -y
   build:
     commands:
-      - echo "Building the application..."
+      - echo Build started on date
+      - unzip -o Web-Application.zip -d /var/www/html
   post_build:
     commands:
-      - echo "Build completed."
-
+      - echo Configuring NGINX
 artifacts:
   files:
-    - scripts/*.sh
-    - appspec.yml
-    - Web-Application.zip
+    - "**/*"
